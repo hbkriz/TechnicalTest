@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using System.Web;
@@ -15,15 +16,22 @@ namespace Bds.TechTest.Services
 
         public override List<string> Result(string searchTerm)
         {
-            var htmlDocument = $"https://www.google.com/search?q={searchTerm}".ReturnHtmlDocument();
-            
-            var cites = htmlDocument.DocumentNode.SelectNodes("//cite");
-
-            foreach (var cite in cites)
+            try 
             {
-                SearchResultLinks.Add(HttpUtility.HtmlDecode(cite.InnerText));
+                var htmlDocument = $"https://www.google.com/search?q={searchTerm}".ReturnHtmlDocument();
+                
+                var cites = htmlDocument.DocumentNode.SelectNodes("//cite");
+
+                foreach (var cite in cites)
+                {
+                    SearchResultLinks.Add(HttpUtility.HtmlDecode(cite.InnerText));
+                }
+                return SearchResultLinks;
             }
-            return SearchResultLinks;
+            catch(Exception)
+            {
+                return new List<string>();
+            }
         }
     }
 }
