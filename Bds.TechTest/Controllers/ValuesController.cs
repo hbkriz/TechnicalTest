@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using HtmlAgilityPack;
+using System.Text;
+using System.IO;
+using Microsoft.Extensions.Logging;
+using System.Web;
+using Bds.TechTest.Services;
 
 namespace Bds.TechTest.Controllers
 {
@@ -10,10 +17,18 @@ namespace Bds.TechTest.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly ILogger<ValuesController> _logger;
+
+        public ValuesController(ILogger<ValuesController> logger)
+        {
+            _logger = logger;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            _logger.LogInformation($"Searching for values");
             return new string[] { "value1", "value2" };
         }
 
@@ -26,8 +41,17 @@ namespace Bds.TechTest.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<IEnumerable<string>> Post(string searchTerm)
         {
+            _logger.LogInformation($"Searching for {searchTerm}");
+
+            var searchEngines = new List<SearchEngineService> {new GoogleSearchService(), new DuckDuckGoSearchService()};
+
+            var combinedResults = searchEngines.Run(searchTerm);
+
+            _logger.LogDebug($"Found {combinedResults.Count} results for {searchTerm}");
+
+            return combinedResults;
         }
 
         // PUT api/values/5
