@@ -7,8 +7,7 @@ namespace Bds.TechTest.Services
     public class DuckDuckGoSearchService : SearchEngineService
     {
         private readonly List<string> SearchResultLinks;
-        private readonly ILogger<DuckDuckGoSearchService> _logger;
-        public DuckDuckGoSearchService() : base("DuckDuckGo")
+        public DuckDuckGoSearchService() : base()
         {
             SearchResultLinks = new List<string>();
         }
