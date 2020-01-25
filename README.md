@@ -31,7 +31,7 @@ There are three applications that can be run individually.
 > ![](Images/GoToTheWebAPI.png)
 
 > This will take to Swagger API page.                           
-> ![](ImagesUsingTheWebAPI.gif)
+> ![](Images/UsingTheWebAPI.gif)
 
 ### Web App
 
@@ -42,7 +42,7 @@ There are three applications that can be run individually.
 > ![](Images/GoToTheUI.png)
 
 > This will take to the website.                               
-> ![](Images/usingTheUI.gif)
+> ![](Images/UsingTheUI.gif)
 
 ### Unit Test
 
