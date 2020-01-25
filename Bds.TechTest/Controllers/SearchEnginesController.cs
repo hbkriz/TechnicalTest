@@ -12,10 +12,16 @@ namespace Bds.TechTest.Controllers
     public class SearchEnginesController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<IEnumerable<string>> Search(string searchTerm)
+        public List<SearchResult> Search(string searchTerm)
         {
             var searchEngines = new List<SearchEngineService> {new GoogleSearchService(), new DuckDuckGoSearchService()};
-            return searchEngines.Run(searchTerm);
+            var combinedResult = searchEngines.Run(searchTerm);
+            return combinedResult.Select(x => new SearchResult() { Url = x }).ToList();
         }
+    }
+
+    public class SearchResult
+    {
+        public string Url { get; set; }
     }
 }

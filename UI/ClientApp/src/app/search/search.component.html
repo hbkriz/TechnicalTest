@@ -1,0 +1,25 @@
+<h1>Search by Web Crawling</h1>
+<div class="well">
+    <form [formGroup]="form">
+        <div class="form-group">
+            <input type="search"
+                    class="form-control"
+                    placeholder="Enter search string"
+                    [formControl]="searchField">
+        </div>
+    </form>
+
+    <div class="text-center">
+        <p class="lead" *ngIf="loading">Loading...</p>
+    </div>
+  
+    <ul class="list-group">
+        <li class="list-group-item"
+            *ngFor="let track of results | async">
+        <img src="{{track.url}}">
+        <a target="_blank"
+            href="{{track.url}}">{{ track.url }}
+        </a>
+        </li>
+    </ul>
+</div>
