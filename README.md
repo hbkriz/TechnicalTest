@@ -8,28 +8,26 @@ There are three applications that can be run individually.
 ### Web API
 
 > Open the Terminal, run the command in the following location:
-![](/images/RunningTheWebAPI.png)
+> ![](images/RunningTheWebAPI.PNG)
 
 > Click the link
-![](/images/GoToTheWebAPI.png)
+> ![](images/GoToTheWebAPI.PNG)
 
 > This will take to Swagger API page.
-![](UsingTheWebAPI.gif)
-
+> ![](UsingTheWebAPI.gif)
 
 ### Web App
 
 > Open the Terminal, run the command in the following location:
-![](/images/RunningTheUI.png)
+> ![](images/RunningTheUI.PNG)
 
-> Click the link
-![](/images/GoToTheUI.png)
+> Click one of the links
+> ![](images/GoToTheUI.PNG)
 
 > This will take to the website.
-![](usingTheUI.gif)
-
+> ![](usingTheUI.gif)
 
 ### Unit Test
 
 > Open the Terminal, run the command in the following location:
-![](/images/RunningTheTest.png)
+> ![](images/RunningTheTest.PNG)
