@@ -9,7 +9,8 @@ There are three applications that can be run individually.
 
 > Open the Terminal, run the command in the following location:
 
-> Run in .\TechnicalTest root folder (.Net Package restoring three projects)       
+> Run in .\TechnicalTest root folder (.Net Package restoring three projects)  
+> ![](Images/RestoringInRootFolder.png)
 > ![](Images/RestoringThreeProjects.png)
 
 > Run in .\TechnicalTest\UI root folder (.Net Package restoring UI Project)          
