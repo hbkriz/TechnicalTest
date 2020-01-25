@@ -8,7 +8,7 @@ namespace Bds.TechTest.Services
     public class DuckDuckGoSearchService : SearchEngineService
     {
         private readonly List<string> SearchResultLinks;
-        public DuckDuckGoSearchService() : base()
+        public DuckDuckGoSearchService() : base("DuckDuckGo")
         {
             SearchResultLinks = new List<string>();
         }

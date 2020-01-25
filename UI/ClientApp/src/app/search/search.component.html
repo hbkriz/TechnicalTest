@@ -16,7 +16,8 @@
     <ul class="list-group">
         <li class="list-group-item"
             *ngFor="let track of results | async">
-        <img src="{{track.url}}">
+        <img *ngIf="track.type === 'Google'" src="./assets/images/google.png" style="width:25px;height:25px">
+        <img *ngIf="track.type === 'DuckDuckGo'" src="./assets/images/duckduckgo.png" style="width:25px;height:25px">
         <a target="_blank"
             href="{{track.url}}">{{ track.url }}
         </a>

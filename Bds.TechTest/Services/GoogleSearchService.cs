@@ -9,7 +9,7 @@ namespace Bds.TechTest.Services
     {
         private readonly List<string> SearchResultLinks;
 
-        public GoogleSearchService() : base()
+        public GoogleSearchService() : base("Google")
         {
             SearchResultLinks = new List<string>();
         }

@@ -17,8 +17,6 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class SearchComponent {
-  public currentCount = 0;
-
   private loading: boolean = false;
   private results: Observable<SearchItem[]>;
   private searchField: FormControl;
@@ -45,15 +43,12 @@ export class SearchComponent {
       map(data => {
         return data.map(item => {
           return new SearchItem(
-            item.url
+            item.url,
+            item.type
           );
         });
       }, error => console.error(error))
     );
-  }
-
-  public incrementCounter() {
-    this.currentCount++;
   }
 }
 

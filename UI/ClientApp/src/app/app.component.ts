@@ -11,6 +11,7 @@ export class AppComponent {
 
 export class SearchItem {
   constructor(
-    public url: string
+    public url: string,
+    public type: string
   ) {}
 }

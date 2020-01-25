@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Bds.TechTest.Controllers;
+using Models;
 
 namespace UI.Controllers
 {
@@ -16,13 +17,8 @@ namespace UI.Controllers
         public IEnumerable<SearchResult> TwoSearchEngines(string term)
         {
             return _apiController.Search(term).Select(
-                x => new SearchResult() { Url = x.Url }
+                x => new SearchResult() { Url = x.Url, Type= x.Type }
                 ).ToList();
-        }
-
-        public class SearchResult
-        {
-            public string Url { get; set; }
         }
     }
 }
