@@ -8,24 +8,30 @@ There are three applications that can be run individually.
 ### Web API
 
 > Open the Terminal, run the command in the following location:
+![](RunningTheWebAPI.png)
 
 > Click the link
+![](GoToTheWebAPI.png)
 
-> This will take to Swagger Page as shown below.
-
+> This will take to Swagger API page.
 ![](UsingTheWebAPI.gif)
 
 
 ### Web App
 
 > Run the website by "dotnet run -p UI"
-> Click http://localhost:5000
+![](RunningTheUI.png)
 
+> Click the link
+![](GoToTheUI.png)
+
+> This will take to the website.
 ![](usingTheUI.gif)
 
 
 ### Unit Test
 
-> Run the test by "dotnet test"
+> Open the Terminal, run the command in the following location:
+![](RunningTheTest.png)
 
 
