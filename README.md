@@ -11,6 +11,8 @@ There are three applications that can be run individually.
 
 > Run in .\TechnicalTest root folder (.Net Package restoring three projects)  
 > ![](Images/RestoringInRootFolder.png)
+>                                                                           
+> The following .csprojs will be updated with packages
 > ![](Images/RestoringThreeProjects.png)
 
 > Run in .\TechnicalTest\UI root folder (.Net Package restoring UI Project)          
