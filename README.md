@@ -7,8 +7,10 @@ There are three applications that can be run individually.
 
 ### Web API
 
-> Run the web API by "dotnet run -p Bds.TechTest"
-> Click http://localhost:5000
+> Open the Terminal, run the command in the following location:
+
+> Click the link
+
 > This will take to Swagger Page as shown below.
 
 ![](UsingTheWebAPI.gif)
@@ -19,9 +21,11 @@ There are three applications that can be run individually.
 > Run the website by "dotnet run -p UI"
 > Click http://localhost:5000
 
+![](usingTheUI.gif)
 
 
 ### Unit Test
 
 > Run the test by "dotnet test"
+
 
